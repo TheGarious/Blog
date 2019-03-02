@@ -26,6 +26,3 @@ install:
 
 script:
     - ./vendor/bin/simple-phpunit --coverage-text --colors
-
-notifications:
-    slack: gamishou:LKx5NQ0OxtO2KR4xi1zg0HOe
