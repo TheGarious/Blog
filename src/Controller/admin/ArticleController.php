@@ -2,6 +2,7 @@
 
 namespace App\Controller\admin;
 
+use App\Manager\ArticleManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -14,13 +15,23 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class ArticleController extends AbstractController
 {
+
+    private $articleManager;
+
+    public function __construct(ArticleManager $articleManager)
+    {
+        $this->articleManager = $articleManager;
+    }
+
     /**
      * @Route("/article", name="article")
      */
     public function index()
     {
-        return $this->render('article/index.html.twig', [
-            'controller_name' => 'ArticleController',
+        $articles = $this->articleManager->findAll();
+
+        return $this->render('admin/article/index.html.twig', [
+            'articles' => $articles,
         ]);
     }
 }
