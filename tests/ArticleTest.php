@@ -8,9 +8,14 @@ use PHPUnit\Framework\TestCase;
 
 class ArticleTest extends TestCase
 {
-    public function testSomething()
+    public function testContent()
     {
-        $this->assertTrue(true);
+        $content = "my content";
+
+        $article = $this->getArticle();
+        $article->setContent($content);
+
+        $this->assertSame($content, $article->getContent());
     }
 
     public function testTitle()
