@@ -100,4 +100,13 @@ abstract class AbstractManager
     {
         return $this->getRepository()->findAll();
     }
+
+    /**
+     * @param array $criteria
+     * @return mixed
+     */
+    public function findBy(array $criteria)
+    {
+        return $this->getRepository()->findBy($criteria);
+    }
 }

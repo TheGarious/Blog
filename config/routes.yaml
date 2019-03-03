@@ -2,6 +2,10 @@ index:
     path: /
     controller: App\Controller\HomeController::index
 
+article_show:
+    path: /article/{url}
+    controller: App\Controller\ArticleController::show
+
 security_login:
     path: /login
     controller: App\Controller\SecurityController::login

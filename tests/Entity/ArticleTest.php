@@ -59,6 +59,16 @@ class ArticleTest extends TestCase
         $this->assertSame($keyword, $article->getKeyword());
     }
 
+    public function testUrl()
+    {
+        $url = "test";
+
+        $article = $this->getArticle();
+        $article->setUrl($url);
+
+        $this->assertSame($url, $article->getUrl());
+    }
+
     private function getArticle()
     {
         return new Article();
