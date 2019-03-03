@@ -5,3 +5,6 @@ index:
 security_login:
     path: /login
     controller: App\Controller\SecurityController::login
+
+dashboard:
+    resource: 'routes/dashboard/dashboard.yaml'

@@ -9,9 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
  * Class ArticleController
  * @package App\Controller\admin
  *
- *
  */
-class ArticleController extends AbstractController
+class DashboardController extends AbstractController
 {
     private $articleManager;
 

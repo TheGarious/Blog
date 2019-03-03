@@ -1,0 +1,7 @@
+dashboard_index:
+    path: /admin
+    controller: App\Controller\DashboardController::index
+    
+dashboard_article_index:
+    path: /admin/article
+    controller: App\Controller\ArticleController::index
