@@ -1,0 +1,7 @@
+article:
+    label:
+        title: "Titre de l'article"
+        sub_title: "Sous-titre de l'article"
+        keyword: "Mots clés"
+        content: "Contenu"
+        save: "Enregistrer"

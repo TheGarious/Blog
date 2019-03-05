@@ -1,7 +1,15 @@
 dashboard_index:
     path: /admin
-    controller: App\Controller\DashboardController::index
+    controller: App\Controller\admin\DashboardController::index
     
 dashboard_article_index:
     path: /admin/article
-    controller: App\Controller\ArticleController::index
+    controller: App\Controller\admin\ArticleController::index
+
+dashboard_article_new:
+    path: /admin/article/new
+    controller: App\Controller\admin\ArticleController::new
+
+dashboard_article_show:
+    path: /admin/article/{id}/show
+    controller: App\Controller\admin\ArticleController::show

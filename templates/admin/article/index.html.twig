@@ -1,4 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
+
+{% trans_default_domain "admin" %}
 
 {% block title %}Hello Admin ArticleController!{% endblock %}
 
@@ -11,5 +13,22 @@
     <div class="example-wrapper">
         <h1>Hello Admin Article Index! ✅</h1>
 
+        <table>
+            <tr>
+                <th>{{ "article.label.title"|trans }}</th>
+                <th>{{ "article.label.sub_title"|trans }}</th>
+                <th>{{ "article.label.keyword"|trans }}</th>
+                <th>{{ "article.label.url"|trans }}</th>
+            </tr>
+
+            {% for article in articles %}
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>{{ article.subTitle }}</td>
+                <td>{{ article.keyword }}</td>
+                <td>{{ article.url }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 {% endblock %}
