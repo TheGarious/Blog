@@ -10,6 +10,11 @@ dashboard_article_new:
     path: /admin/article/new
     controller: App\Controller\admin\ArticleController::new
 
+dashboard_article_edit:
+    path: /admin/article/{id}/edit
+    controller: App\Controller\admin\ArticleController::edit
+
+
 dashboard_article_show:
     path: /admin/article/{id}/show
     controller: App\Controller\admin\ArticleController::show

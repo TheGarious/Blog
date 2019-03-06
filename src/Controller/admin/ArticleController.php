@@ -63,4 +63,19 @@ class ArticleController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    public function edit(Request $request, Article $article)
+    {
+        $form = $this->createForm(ArticleType::class, $article);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->articleManager->update($article);
+
+            return $this->redirectToRoute("dashboard_article_index");
+        }
+
+        return $this->render('admin/article/edit.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
 }

@@ -19,6 +19,7 @@
                 <th>{{ "article.label.sub_title"|trans }}</th>
                 <th>{{ "article.label.keyword"|trans }}</th>
                 <th>{{ "article.label.url"|trans }}</th>
+                <th>{{ "article.label.action"|trans }}</th>
             </tr>
 
             {% for article in articles %}
@@ -27,6 +28,7 @@
                 <td>{{ article.subTitle }}</td>
                 <td>{{ article.keyword }}</td>
                 <td>{{ article.url }}</td>
+                <td><a href="{{ path("dashboard_article_edit", {id: article.id}) }}">Edit</a></td>
             </tr>
             {% endfor %}
         </table>
