@@ -1,8 +1,8 @@
 <?php
 
-namespace AppBundle\EventListener;
+namespace App\EventListener;
 
-use AppBundle\Event\ArticleCreationEvent;
+use App\Event\ArticleCreationEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class ArticleSubscriber implements EventSubscriberInterface

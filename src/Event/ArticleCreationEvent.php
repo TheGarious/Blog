@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Event;
+namespace App\Event;
 
 use App\Entity\Article;
 use Symfony\Component\EventDispatcher\Event;
