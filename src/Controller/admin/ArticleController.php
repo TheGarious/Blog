@@ -64,9 +64,16 @@ class ArticleController extends AbstractController
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @param Article $article
+     * @return RedirectResponse|Response
+     */
     public function edit(Request $request, Article $article)
     {
-        $form = $this->createForm(ArticleType::class, $article);
+        $form = $this->createForm(ArticleType::class, $article, [
+            'method' => 'PUT'
+        ]);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $this->articleManager->update($article);
@@ -77,5 +84,24 @@ class ArticleController extends AbstractController
         return $this->render('admin/article/edit.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @param Request $request
+     * @param Article $article
+     * @return Response
+     */
+    public function show(Request $request, Article $article)
+    {
+        return $this->render("admin/article/show.html.twig", [
+            'article' => $article
+        ]);
+    }
+
+    public function delete(Request $request, Article $article)
+    {
+        $this->articleManager->delete($article);
+
+        return $this->redirectToRoute('dashboard_article_index');
     }
 }

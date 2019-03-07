@@ -12,7 +12,7 @@
 
     <div class="example-wrapper">
         <h1>Hello Admin Article Index! ✅</h1>
-
+        <a href="{{ path('dashboard_article_new') }}">New</a>
         <table>
             <tr>
                 <th>{{ "article.label.title"|trans }}</th>
@@ -28,7 +28,10 @@
                 <td>{{ article.subTitle }}</td>
                 <td>{{ article.keyword }}</td>
                 <td>{{ article.url }}</td>
-                <td><a href="{{ path("dashboard_article_edit", {id: article.id}) }}">Edit</a></td>
+                <td>
+                    <a href="{{ path("dashboard_article_edit", {id: article.id}) }}">Edit</a>
+                    <a href="{{ path("dashboard_article_delete", {id: article.id}) }}">Delete</a>
+                </td>
             </tr>
             {% endfor %}
         </table>

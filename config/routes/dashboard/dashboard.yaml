@@ -1,20 +1,28 @@
 dashboard_index:
     path: /admin
     controller: App\Controller\admin\DashboardController::index
+    methods: GET
     
 dashboard_article_index:
     path: /admin/article
     controller: App\Controller\admin\ArticleController::index
+    methods: GET
 
 dashboard_article_new:
     path: /admin/article/new
     controller: App\Controller\admin\ArticleController::new
-
+    methods: GET|POST
+    
 dashboard_article_edit:
-    path: /admin/article/{id}/edit
+    path: /admin/article/edit/{id}
     controller: App\Controller\admin\ArticleController::edit
-
+    methods: GET|PUT
 
 dashboard_article_show:
-    path: /admin/article/{id}/show
+    path: /admin/article/show/{id}
     controller: App\Controller\admin\ArticleController::show
+    methods: GET
+    
+dashboard_article_delete:
+    path: /admin/article/delete/{id}
+    controller: App\Controller\admin\ArticleController::delete
