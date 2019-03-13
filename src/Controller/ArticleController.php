@@ -19,4 +19,12 @@ class ArticleController extends AbstractController
             'article' => $article,
         ]);
     }
+
+    public function list(ArticleManager $articleManager)
+    {
+        $articles = $articleManager->findAll();
+        return $this->render('article/list.html.twig', [
+            'articles' => $articles
+        ]);
+    }
 }

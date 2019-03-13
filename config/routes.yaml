@@ -6,6 +6,10 @@ article_show:
     path: /article/{url}
     controller: App\Controller\ArticleController::show
 
+article_list:
+    path: /article
+    controller: App\Controller\ArticleController::list
+
 security_login:
     path: /login
     controller: App\Controller\SecurityController::login
