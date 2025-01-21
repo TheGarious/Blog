@@ -1,6 +1,8 @@
+file.ext: 
+    Union of Soviet Socialist Republics: Union of Soviet Socialist Republics
 article:
     label:
-        title: "Titre"
+        title: "TOTO"
         sub_title: "Sous-titre"
         keyword: "Mots clés"
         content: "Contenu"
